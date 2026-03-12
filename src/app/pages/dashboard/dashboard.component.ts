@@ -1,11 +1,10 @@
 import { Component, inject } from '@angular/core';
-
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatButtonModule } from '@angular/material/button';
 @Component({
   selector: 'app-dashboard',
-  imports: [],
+  imports: [MatButtonModule],
   templateUrl: './dashboard.component.html',
-  styleUrl: './dashboard.component.scss'
+  styleUrl: './dashboard.component.scss',
 })
-export class DashboardComponent {
-
-}
+export class DashboardComponent {}
