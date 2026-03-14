@@ -1,2 +1,15 @@
 <span class="toolbar-title">{{ breadcrumb }}</span>
+<div>
+  <h4>Radion buttons</h4>
+  <div>
+    <mat-radio-group
+      [(ngModel)]="selectedColor"
+      (change)="themeService.setColor($event.value)"
+    >
+      <mat-radio-button value="green">Green</mat-radio-button>
+      <mat-radio-button value="red">red</mat-radio-button>
+      <mat-radio-button value="blue">blue</mat-radio-button>
+    </mat-radio-group>
+  </div>
+</div>
 <router-outlet></router-outlet>
