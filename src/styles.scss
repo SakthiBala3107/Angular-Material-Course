@@ -2,15 +2,21 @@
 @use "@angular/material" as mat;
 @use "theme-colors" as theme;
 html {
-  color-scheme: dark;
+  color-scheme: light;
   @include mat.theme(
     (
       color: theme.$primary-palette,
     )
   );
+  @include mat.theme-overrides(
+    (
+      corner-full: 5px,
+      corner-extra-large: 5px,
+    )
+  );
 
   @media (prefers-contrast: more) {
-    @include theme.high-contrast-overrides("dark");
+    @include theme.high-contrast-overrides("light");
   }
 }
 
@@ -20,23 +26,42 @@ html {
       color: theme.$tertiary-palette,
     )
   );
+  @include mat.theme-overrides(
+    (
+      corner-full: 5px,
+    )
+  );
 }
-
 .secondary {
   @include mat.theme(
     (
       color: theme.$secondary-palette,
     )
   );
+  @include mat.theme-overrides(
+    (
+      corner-full: 5px,
+    )
+  );
 }
-
 .error {
   @include mat.theme(
     (
       color: theme.$error-palette,
     )
   );
+  @include mat.theme-overrides(
+    (
+      corner-full: 5px,
+    )
+  );
 }
+
+.text-color {
+  color: var(--mat-sys-error);
+}
+
+//
 
 html,
 body {
