@@ -1,6 +1,7 @@
 import { computed, effect, Injectable, signal } from '@angular/core';
 
 const STORAGE_KEY = 'theme-class';
+const THEME = 'theme-color';
 
 @Injectable({
   providedIn: 'root',
@@ -13,6 +14,11 @@ export class ThemeService {
   public currentTheme = computed(() => this.color());
 
   constructor() {
+    const isMode = localStorage.getItem(THEME) as 'light' | 'dark';
+    if (isMode) {
+      this.mode.set(isMode);
+    }
+
     const saved = localStorage.getItem(STORAGE_KEY) as 'green' | 'red' | 'blue';
     if (saved) {
       this.color.set(saved);
@@ -21,6 +27,7 @@ export class ThemeService {
     effect(() => {
       document.documentElement.className = this.currentTheme();
       localStorage.setItem(STORAGE_KEY, this.color());
+      localStorage.setItem(THEME, this.mode());
     });
   }
 

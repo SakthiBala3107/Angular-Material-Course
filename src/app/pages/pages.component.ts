@@ -22,6 +22,7 @@ import { MatRadioButton, MatRadioGroup } from '@angular/material/radio';
 export class PagesComponent {
   breadcrumb = 'Dashboard'; // default fallback
   selectedColor: 'red' | 'green' | 'blue' = 'green';
+  selectedMode: 'light' | 'dark' = 'light';
 
   constructor(
     private router: Router,
@@ -40,6 +41,7 @@ export class PagesComponent {
         });
       });
     this.selectedColor = themeService.color();
+    this.selectedMode = themeService.mode();
   }
 
   getChild(route: ActivatedRoute): ActivatedRoute {
