@@ -11,16 +11,17 @@ import { filter } from 'rxjs';
 import { ThemeService } from '../services/theme.service';
 import { FormsModule } from '@angular/forms';
 import { LoaderService } from '../services/loader.service';
+import {
+  MatButtonToggleGroup,
+  MatButtonToggleModule,
+} from '@angular/material/button-toggle';
 import { MatRadioButton, MatRadioGroup } from '@angular/material/radio';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
-import {
-  MatButtonToggleGroup,
-  MatButtonToggleModule,
-} from '@angular/material/button-toggle';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 @Component({
   selector: 'app-pages',
@@ -37,6 +38,7 @@ import {
     MatListModule,
     MatIconModule,
     MatButtonModule,
+    MatProgressSpinnerModule,
   ],
   templateUrl: './pages.component.html',
   styleUrl: './pages.component.scss',
@@ -45,7 +47,7 @@ export class PagesComponent {
   breadcrumb = 'Dashboard'; // default fallback
   selectedColor: 'red' | 'green' | 'blue' = 'green';
   selectedMode: 'light' | 'dark' = 'light';
-
+  isShowSpinner: boolean = false;
   constructor(
     private router: Router,
     private route: ActivatedRoute,

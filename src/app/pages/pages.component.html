@@ -63,6 +63,12 @@
       </mat-list>
     </mat-sidenav>
     <section>
+      @if (isShowSpinner) {
+        <div class="spinner-overlay">
+          <mat-spinner></mat-spinner>
+        </div>
+      }
+      <!-- <mat-spinner mode="determinate" value="20"></mat-spinner> -->
       <mat-toolbar class="toolbar">
         <button mat-mini-fab (click)="mainNav.toggle()">
           <mat-icon>menu</mat-icon>

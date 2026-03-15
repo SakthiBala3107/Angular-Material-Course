@@ -44,3 +44,16 @@ a[matListItemTitle] {
 .spacer {
   flex: 1 1 auto;
 }
+
+.spinner-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100dvw;
+  height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--mat-sys-tertiary-fixed);
+  opacity: 0.6;
+}
