@@ -112,6 +112,14 @@
         <p>This is a basic admin layout using Angular Material 19.</p>
 
         <h4>Toggle Button Component</h4>
+        <mat-grid-list cols="2" rowHeight="150px">
+          <mat-grid-tile></mat-grid-tile>
+          <mat-grid-tile></mat-grid-tile>
+          <mat-grid-tile rowspan="2"></mat-grid-tile>
+          <mat-grid-tile rowspan="2"></mat-grid-tile>
+        </mat-grid-list>
+
+        <!--  -->
         <mat-button-toggle-group>
           <mat-button-toggle value="bold">Bold</mat-button-toggle>
           <mat-button-toggle value="Italic">Italic</mat-button-toggle>

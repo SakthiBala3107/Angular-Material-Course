@@ -24,6 +24,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatGridListModule } from '@angular/material/grid-list';
 
 @Component({
   selector: 'app-pages',
@@ -43,6 +44,7 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
     MatProgressSpinnerModule,
     MatProgressBarModule,
     MatSlideToggleModule,
+    MatGridListModule,
   ],
   templateUrl: './pages.component.html',
   styleUrl: './pages.component.scss',
