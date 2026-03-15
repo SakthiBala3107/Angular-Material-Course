@@ -28,24 +28,6 @@
           <a matListItemTitle routerLink="/kanban">Kanban Board Mini</a>
         </mat-list-item>
       </mat-nav-list>
-
-      <!-- <ul>
-        <li>
-          <a routerLink="">Dashboard</a>
-        </li>
-        <li>
-          <a routerLink="/contact">Contact Us</a>
-        </li>
-        <li>
-          <a routerLink="/user">User Profile Manager</a>
-        </li>
-        <li>
-          <a routerLink="/data">Data Display</a>
-        </li>
-        <li>
-          <a routerLink="/kanban">Kanban Board Mini</a>
-        </li>
-      </ul> -->
     </mat-sidenav>
     <mat-sidenav #setting mode="over" position="end">
       <mat-list role="list">
@@ -82,12 +64,12 @@
     </mat-sidenav>
     <section>
       <mat-toolbar class="toolbar">
-        <button (click)="mainNav.toggle()">
+        <button mat-mini-fab (click)="mainNav.toggle()">
           <mat-icon>menu</mat-icon>
         </button>
         <span class="toolbar-title">{{ breadcrumb }}</span>
         <span class="spacer"></span>
-        <button (click)="setting.toggle()">
+        <button mat-mini-fab (click)="setting.toggle()">
           <mat-icon>tune</mat-icon>
         </button>
       </mat-toolbar>
