@@ -1,28 +1,59 @@
 <span class="toolbar-title">{{ breadcrumb }}</span>
-<div>
-  <h4>Radion buttons</h4>
-  <div>
-    <mat-radio-group
-      [(ngModel)]="selectedColor"
-      (change)="themeService.setColor($event.value)"
-    >
-      <mat-radio-button value="green">Green</mat-radio-button>
-      <mat-radio-button value="red">red</mat-radio-button>
-      <mat-radio-button value="blue">blue</mat-radio-button>
-    </mat-radio-group>
-  </div>
-</div>
 
 <div>
-  <h4>Select a Mode</h4>
-  <div>
-    <mat-radio-group
-      [(ngModel)]="selectedMode"
-      (change)="themeService.setMode($event.value)"
+  <h4>sidenav</h4>
+  <mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #mainNav opened>
+      <ul>
+        <li>
+          <a routerLink="">Dashboard</a>
+        </li>
+        <li>
+          <a routerLink="/contact">Contact Us</a>
+        </li>
+        <li>
+          <a routerLink="/user">User Profile Manager</a>
+        </li>
+        <li>
+          <a routerLink="/data">Data Display</a>
+        </li>
+        <li>
+          <a routerLink="/kanban">Kanban Board Mini</a>
+        </li>
+      </ul>
+    </mat-sidenav>
+    <mat-sidenav #setting position="end"
+      ><div>
+        <h4>Radion buttons</h4>
+        <div>
+          <mat-radio-group
+            [(ngModel)]="selectedColor"
+            (change)="themeService.setColor($event.value)"
+          >
+            <mat-radio-button value="green">Green</mat-radio-button>
+            <mat-radio-button value="red">red</mat-radio-button>
+            <mat-radio-button value="blue">blue</mat-radio-button>
+          </mat-radio-group>
+        </div>
+      </div>
+
+      <div>
+        <h4>Select a Mode</h4>
+        <div>
+          <mat-radio-group
+            [(ngModel)]="selectedMode"
+            (change)="themeService.setMode($event.value)"
+          >
+            <mat-radio-button value="light">Light</mat-radio-button>
+            <mat-radio-button value="dark">Dark</mat-radio-button>
+          </mat-radio-group>
+        </div>
+      </div></mat-sidenav
     >
-      <mat-radio-button value="light">Light</mat-radio-button>
-      <mat-radio-button value="dark">Dark</mat-radio-button>
-    </mat-radio-group>
-  </div>
+    <section>
+      <button (click)="mainNav.toggle()">Toggle Main Nav</button>
+      <button (click)="setting.toggle()">Toggle settings</button>
+    </section>
+  </mat-sidenav-container>
 </div>
 <router-outlet></router-outlet>
