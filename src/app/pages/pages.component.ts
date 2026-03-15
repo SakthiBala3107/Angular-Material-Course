@@ -14,6 +14,7 @@ import { LoaderService } from '../services/loader.service';
 import { MatRadioButton, MatRadioGroup } from '@angular/material/radio';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatListModule } from '@angular/material/list';
 import {
   MatButtonToggleGroup,
   MatButtonToggleModule,
@@ -31,6 +32,7 @@ import {
     MatButtonToggleGroup,
     MatButtonToggleModule,
     MatToolbarModule,
+    MatListModule,
   ],
   templateUrl: './pages.component.html',
   styleUrl: './pages.component.scss',

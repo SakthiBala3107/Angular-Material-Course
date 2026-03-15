@@ -1,3 +1,14 @@
+@use "@angular/material" as mat;
+
+.toolbar {
+  @include mat.toolbar-overrides(
+    (
+      container-background-color: var(--mat-sys-primary),
+      container-text-color: var(--mat-sys-on-primary),
+    )
+  );
+}
+
 .toolbar-title {
   margin-left: 1rem;
 }
@@ -7,6 +18,20 @@
   bottom: 0;
   left: 0;
   right: 0;
+}
+mat-sidenav {
+  @include mat.sidenav-overrides(
+    (
+      container-shape: 0px,
+    )
+  );
+}
+setting-list-item {
+  @include mat.list-overrides(
+    (
+      list-item-two-line-container-height: 80px,
+    )
+  );
 }
 
 .mainnav {
