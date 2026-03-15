@@ -34,6 +34,10 @@ setting-list-item {
   );
 }
 
+a[matListItemTitle] {
+  text-decoration: none;
+}
+
 .mainnav {
   width: 300px;
 }

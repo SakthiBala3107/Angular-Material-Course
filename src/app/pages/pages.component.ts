@@ -15,6 +15,7 @@ import { MatRadioButton, MatRadioGroup } from '@angular/material/radio';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatListModule } from '@angular/material/list';
+import { MatIconModule } from '@angular/material/icon';
 import {
   MatButtonToggleGroup,
   MatButtonToggleModule,
@@ -33,6 +34,7 @@ import {
     MatButtonToggleModule,
     MatToolbarModule,
     MatListModule,
+    MatIconModule,
   ],
   templateUrl: './pages.component.html',
   styleUrl: './pages.component.scss',
