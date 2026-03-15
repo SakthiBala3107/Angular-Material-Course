@@ -112,68 +112,78 @@
         <p>This is a basic admin layout using Angular Material 19.</p>
 
         <h4>Toggle Button Component</h4>
-        <mat-grid-list cols="2" rowHeight="150px">
-          <mat-grid-tile></mat-grid-tile>
-          <mat-grid-tile></mat-grid-tile>
-          <mat-grid-tile rowspan="2"></mat-grid-tile>
-          <mat-grid-tile rowspan="2"></mat-grid-tile>
+        <mat-grid-list [cols]="col$ | async" rowHeight="180px" gutterSize="5">
+          <mat-grid-tile>
+            <mat-grid-tile-header>Button Colors</mat-grid-tile-header>
+            <div>
+              <mat-button-toggle-group>
+                <mat-button-toggle value="bold">Bold</mat-button-toggle>
+                <mat-button-toggle value="Italic">Italic</mat-button-toggle>
+                <mat-button-toggle value="UnderLine"
+                  >UnderLine</mat-button-toggle
+                >
+              </mat-button-toggle-group>
+            </div>
+          </mat-grid-tile>
+          <!--  -->
+          <mat-grid-tile>
+            <mat-grid-tile-header>Basic Buttons</mat-grid-tile-header>
+            <div>
+              <button mat-flat-button class="theme-builder">Basic</button>
+              <button mat-flat-button disabled class="theme-builder">
+                Disabled
+              </button>
+              <a class="theme-builder" mat-flat-button>ThemeBuilder</a>
+            </div>
+          </mat-grid-tile>
+          <!--  -->
+          <mat-grid-tile rowspan="2">
+            <mat-grid-tile-header> Button Types </mat-grid-tile-header>
+
+            <div>
+              <button mat-flat-button>Primary</button>
+              <button mat-flat-button class="tertiary">Tertiary</button>
+              <button mat-flat-button class="secondary">secondary</button>
+              <button mat-flat-button class="error">Error</button>
+            </div>
+          </mat-grid-tile>
+          <!--  -->
+          <mat-grid-tile rowspan="2">
+            <mat-grid-tile-header>Button Others</mat-grid-tile-header>
+            <div>
+              <p>Basic Buttons</p>
+              <button mat-button>Basic</button>
+              <button mat-button disabled>Disabled</button>
+              <a mat-button href="/">Link</a>
+
+              <p>Flat Buttons</p>
+              <button mat-flat-button>Basic</button>
+              <button mat-flat-button disabled>Disabled</button>
+              <a mat-flat-button href="https://www.google.com/" target="_blank"
+                >Link</a
+              >
+
+              <p>Stroked Buttons</p>
+              <button mat-stroked-button>Basic</button>
+              <button mat-stroked-button disabled>Disabled</button>
+              <a
+                mat-stroked-button
+                href="https://www.google.com/"
+                target="_blank"
+                >Link</a
+              >
+
+              <p>Raised Buttons</p>
+              <button mat-raised-button>Basic</button>
+              <button mat-raised-button disabled>Disabled</button>
+              <a mat-flat-raised href="https://www.google.com/" target="_blank"
+                >Link</a
+              >
+            </div>
+          </mat-grid-tile>
         </mat-grid-list>
 
         <!--  -->
-        <mat-button-toggle-group>
-          <mat-button-toggle value="bold">Bold</mat-button-toggle>
-          <mat-button-toggle value="Italic">Italic</mat-button-toggle>
-          <mat-button-toggle value="UnderLine">UnderLine</mat-button-toggle>
-        </mat-button-toggle-group>
-
-        <div>
-          <h4>Custom Theme Builder</h4>
-          <button mat-flat-button class="theme-builder">Basic</button>
-          <button mat-flat-button disabled class="theme-builder">
-            Disabled
-          </button>
-          <a class="theme-builder" mat-flat-button>ThemeBuilder</a>
-        </div>
-
-        <div>
-          <div>
-            <h4>Button Components</h4>
-            <p>Button Colors</p>
-          </div>
-          <div>
-            <button mat-flat-button>Primary</button>
-            <button mat-flat-button class="tertiary">Tertiary</button>
-            <button mat-flat-button class="secondary">secondary</button>
-            <button mat-flat-button class="error">Error</button>
-          </div>
-          <!--  -->
-
-          <p>Basic Buttons</p>
-          <button mat-button>Basic</button>
-          <button mat-button disabled>Disabled</button>
-          <a mat-button href="/">Link</a>
-
-          <p>Flat Buttons</p>
-          <button mat-flat-button>Basic</button>
-          <button mat-flat-button disabled>Disabled</button>
-          <a mat-flat-button href="https://www.google.com/" target="_blank"
-            >Link</a
-          >
-
-          <p>Stroked Buttons</p>
-          <button mat-stroked-button>Basic</button>
-          <button mat-stroked-button disabled>Disabled</button>
-          <a mat-stroked-button href="https://www.google.com/" target="_blank"
-            >Link</a
-          >
-
-          <p>Raised Buttons</p>
-          <button mat-raised-button>Basic</button>
-          <button mat-raised-button disabled>Disabled</button>
-          <a mat-flat-raised href="https://www.google.com/" target="_blank"
-            >Link</a
-          >
-        </div>
       </div>
     </section>
   </mat-sidenav-container>
