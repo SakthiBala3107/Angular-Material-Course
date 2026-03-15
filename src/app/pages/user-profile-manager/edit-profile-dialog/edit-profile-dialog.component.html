@@ -1,16 +1,25 @@
-<h2>Edit Profile</h2>
+<h2 mat-dialog-title>Edit Profile</h2>
 <form [formGroup]="form" (ngSubmit)="save()" class="form-grid">
-    <div class="full-width">
-        <label>Name</label>
-        <input formControlName="name">
-    </div>
-    <div class="full-width">
-        <label>Bio</label>
-        <textarea formControlName="bio"></textarea>
-    </div>
-
-    <div>
-        <button>Cancel</button>
-        <button [disabled]="form.invalid">Update</button>
-    </div>
+  <mat-dialog-content> Form control are meant to be here </mat-dialog-content>
+  <mat-dialog-actions>
+    <button mat-button mat-dialog-close>cancel</button>
+    <button mat-button type="submit">Update</button>
+  </mat-dialog-actions>
 </form>
+
+<!-- <h2>Edit Profile</h2>
+<form [formGroup]="form" (ngSubmit)="save()" class="form-grid">
+  <div class="full-width">
+    <label>Name</label>
+    <input formControlName="name" />
+  </div>
+  <div class="full-width">
+    <label>Bio</label>
+    <textarea formControlName="bio"></textarea>
+  </div>
+
+  <div>
+    <button>Cancel</button>
+    <button [disabled]="form.invalid">Update</button>
+  </div>
+</form> -->
