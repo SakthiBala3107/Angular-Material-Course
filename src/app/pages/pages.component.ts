@@ -13,6 +13,11 @@ import { FormsModule } from '@angular/forms';
 import { LoaderService } from '../services/loader.service';
 import { MatRadioButton, MatRadioGroup } from '@angular/material/radio';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import {
+  MatButtonToggleGroup,
+  MatButtonToggleModule,
+} from '@angular/material/button-toggle';
 
 @Component({
   selector: 'app-pages',
@@ -23,6 +28,9 @@ import { MatSidenavModule } from '@angular/material/sidenav';
     MatRadioButton,
     MatRadioGroup,
     MatSidenavModule,
+    MatButtonToggleGroup,
+    MatButtonToggleModule,
+    MatToolbarModule,
   ],
   templateUrl: './pages.component.html',
   styleUrl: './pages.component.scss',
