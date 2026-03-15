@@ -22,6 +22,8 @@ import { MatListModule } from '@angular/material/list';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 @Component({
   selector: 'app-pages',
@@ -39,6 +41,8 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     MatIconModule,
     MatButtonModule,
     MatProgressSpinnerModule,
+    MatProgressBarModule,
+    MatSlideToggleModule,
   ],
   templateUrl: './pages.component.html',
   styleUrl: './pages.component.scss',
@@ -48,6 +52,7 @@ export class PagesComponent {
   selectedColor: 'red' | 'green' | 'blue' = 'green';
   selectedMode: 'light' | 'dark' = 'light';
   isShowSpinner: boolean = false;
+  isShowProgressbar: boolean = false;
   constructor(
     private router: Router,
     private route: ActivatedRoute,

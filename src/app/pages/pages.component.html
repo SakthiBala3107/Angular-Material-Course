@@ -29,7 +29,7 @@
         </mat-list-item>
       </mat-nav-list>
     </mat-sidenav>
-    <mat-sidenav #setting mode="over" position="end">
+    <mat-sidenav #setting mode="over" position="end" (click)="setting.toggle()">
       <mat-list role="list">
         <div mat-list-item role="listitem" class="setting-list-item">
           <mat-toolbar class="toolbar">Settings</mat-toolbar>
@@ -60,6 +60,25 @@
             </mat-radio-group>
           </div>
         </div>
+        <!--  -->
+
+        <mat-list-item role="listitem" class="setting-list-item">
+          <mat-slide-toggle
+            labelPosition="before"
+            (click)="isShowSpinner = !isShowSpinner"
+            >Toggle Progress Spinner</mat-slide-toggle
+          >
+        </mat-list-item>
+        <!--  -->
+        <mat-list-item
+          role="listitem"
+          class="setting-list-item"
+          (click)="isShowProgressbar = !isShowProgressbar"
+        >
+          <mat-slide-toggle labelPosition="before"
+            >Toggle Progress bar</mat-slide-toggle
+          >
+        </mat-list-item>
       </mat-list>
     </mat-sidenav>
     <section>
@@ -79,6 +98,14 @@
           <mat-icon>tune</mat-icon>
         </button>
       </mat-toolbar>
+      @if (isShowProgressbar) {
+        <div>
+          <mat-progress-bar
+            class="theme-builder"
+            mode="indeterminate"
+          ></mat-progress-bar>
+        </div>
+      }
 
       <div>
         <h2 class="text-color">Welcome!</h2>
