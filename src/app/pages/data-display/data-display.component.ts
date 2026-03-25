@@ -94,7 +94,7 @@ const PRODUCT_DATA: Product[] = [
 export class DataDisplayComponent implements AfterViewInit {
   // dataSource: Product[] = PRODUCT_DATA;
   columnsToDisplay = ['id', 'name', 'category', 'price', 'stock'];
-  columnsToDisplay4 = ['id', 'name', 'category', 'price', 'stock'];
+  columnsToDisplay2 = ['id', 'name', 'category', 'price', 'stock'];
 
   dataSource = new MatTableDataSource<Product>(PRODUCT_DATA);
 
